@@ -1,42 +1,8 @@
-import { createSlice, nanoid, } from '@reduxjs/toolkit'
+import { createSlice, nanoid} from '@reduxjs/toolkit'
+import bucketData from '../assets/model.json';
 
 const initialState = {
-    buckets: [
-        {
-            id: nanoid(),
-            name: "Entertainment",
-            cards: [
-                {
-                    id: nanoid(),
-                    title: "card2",
-                    link: "https://youtube.com/embed/cV2gBU6hKfY"
-                }
-            ]
-        },
-        {
-            id: nanoid(),
-            name: "Education",
-            cards: [
-                {
-                    id: nanoid(),
-                    title: "card1",
-                    link: "https://youtube.com/embed/hVvAkPbJwnw"
-                },
-                {
-                    id: nanoid(),
-                    title: "card10",
-                    link: "https://youtube.com/embed/GQoQoJmmAuM"
-                },
-                {
-                    id: nanoid(),
-                    title: "card100",
-                    link: "link3"
-                },
-
-            ]
-        }
-
-    ],
+    buckets: bucketData
 }
 
 initialState.buckets.map((item) => {
